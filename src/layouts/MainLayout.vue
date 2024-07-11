@@ -40,7 +40,7 @@ export default defineComponent({
   name: 'MainLayout',
   methods: {
     Marcou() {
-      this.$router.push('/Marcou');
+      this.$router.push('/Aprendizados');
       console.log('Método Marcou foi chamado!');
     },
     Oracao() {
@@ -56,11 +56,11 @@ export default defineComponent({
       console.log('Método HomePage foi chamado!');
     },
     goToAdmin() {
-      this.$router.push('/admin');
+      this.$router.push('/Pubs');
       console.log('Método goToAdmin foi chamado!');
     },
     ComQuem() {
-      this.$router.push('/Quem');
+      this.$router.push('/Encontros');
       console.log('Método ComQuem foi chamado!');
     }
   }

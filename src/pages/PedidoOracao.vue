@@ -10,12 +10,6 @@
           dense
           class="q-mb-lg"
         />
-        <q-btn icon="fa-solid fa-file-import"
-          type="submit"
-          color="primary"
-          label="Enviar Pedido"
-          class="btn-bib"
-        />
       </form>
       <div class="q-mt-lg">
         <q-btn :href="whatsappLink" target="_blank" icon="fa-brands fa-whatsapp" class="btn-whatsapp btn-bib" >Enviar via WhatsApp</q-btn>

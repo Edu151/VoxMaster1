@@ -5,9 +5,9 @@ const routes = [
     children: [
       { path: '', component: () => import('pages/Index.vue') },
       { path: '/Oracao', component: () => import('pages/PedidoOracao.vue') },
-      { path: '/Quem', component: () => import('pages/QuemMeEncontrei.vue') },
-      { path: '/Marcou', component: () => import('pages/Marcou.vue') },
-      { path: '/admin', component: () => import('pages/Admin.vue') },
+      { path: '/Encontros', component: () => import('pages/EncontrosInesperados.vue') },
+      { path: '/Aprendizados', component: () => import('pages/Aprendizado.vue') },
+      { path: '/Pubs', component: () => import('pages/Pubs.vue') },
       { path: '/Bibliadois', component: () => import('pages/BibliaDois.vue') },
     ]
   },

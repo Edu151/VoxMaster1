@@ -27,6 +27,7 @@
         <q-btn class="btn-bib" icon='church' @click="AbrirBiblia" />
         <q-btn class="btn-bib" icon='portrait' @click="ComQuem" />
         <q-btn class="btn-bib" icon="upload" @click="goToAdmin" />
+        <q-btn class="btn-bib" icon="upload" @click="GoToBibliaDois" />
 
 
       </q-toolbar>
@@ -38,6 +39,7 @@
 import { defineComponent } from 'vue';
 import { ref } from 'vue'
 import Essential from '../components/EssentialLink.vue';
+import BibliaDois from "pages/BibliaDois.vue";
 
 const linksList = [
   {
@@ -63,6 +65,11 @@ const linksList = [
 
 export default defineComponent({
   name: 'MainLayout',
+  computed: {
+    BibliaDois() {
+      return BibliaDois
+    }
+  },
   components: {
     Essential
   },
@@ -83,6 +90,10 @@ export default defineComponent({
     },
     Oracao() {
       this.$router.push('/Oracao');
+      console.log('Método Pedido de oração foi chamado!');
+    },
+    GoToBibliaDois() {
+      this.$router.push('/BibliaDois');
       console.log('Método Pedido de oração foi chamado!');
     },
     HomePage() {

@@ -4,7 +4,7 @@
     <q-header elevated>
       <q-toolbar>
         <q-toolbar-title>
-          VOX - A voz profética<q-img style="width: 50px; height: 50px;margin-left: 150px" src="../assets/img.jpeg"/>
+          VOX - A voz profética<q-img style="width: 50px; height: 50px;margin-left: auto" src="src/assets/img.jpeg"/>
         </q-toolbar-title>
       </q-toolbar>
     </q-header>

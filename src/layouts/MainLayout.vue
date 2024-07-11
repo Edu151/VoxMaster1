@@ -4,7 +4,7 @@
     <q-header elevated>
       <q-toolbar>
         <q-toolbar-title>
-          VOX - A voz profética
+          VOX - A voz profética<q-img style="width: 50px; height: 50px;margin-left: 150px" src="../assets/img.jpeg"/>
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
@@ -22,13 +22,11 @@
       <q-toolbar class="q-gutter-md">
 
         <q-btn class="btn-bib" icon="home" @click="HomePage" />
-        <q-btn class="btn-bib" icon="" @click="Oracao" />
-        <q-btn class="btn-bib" icon="check" @click="Marcou" />
-        <q-btn class="btn-bib" icon='church' @click="AbrirBiblia" />
-        <q-btn class="btn-bib" icon='portrait' @click="ComQuem" />
-        <q-btn class="btn-bib" icon="upload" @click="goToAdmin" />
-        <q-btn class="btn-bib" icon="upload" @click="GoToBibliaDois" />
-
+        <q-btn class="btn-bib" icon="fa-solid fa-hands-praying" @click="Oracao" />
+        <q-btn class="btn-bib" icon="fa-solid fa-user-check" @click="Marcou" />
+        <q-btn class="btn-bib" icon="fa-solid fa-book-bible" @click="GoToBibliaDois" />
+        <q-btn class="btn-bib" icon="fa-solid fa-user-group" @click="ComQuem" />
+        <q-btn class="btn-bib" icon="fa-solid fa-upload" @click="goToAdmin" />
 
       </q-toolbar>
     </q-footer>
@@ -37,53 +35,10 @@
 
 <script>
 import { defineComponent } from 'vue';
-import { ref } from 'vue'
-import Essential from '../components/EssentialLink.vue';
-import BibliaDois from "pages/BibliaDois.vue";
-
-const linksList = [
-  {
-    title: 'Entrar',
-    icon: 'home',
-  },
-  {
-    title: 'WhatsApp',
-    icon: 'book-bible',
-    link: ''
-  },
-  {
-    title: 'Instagram',
-    icon: 'instagram',
-    link: 'https://www.instagram.com/saldaterramorrinhos/'
-  },
-  {
-    title: 'Facebook',
-    icon: 'facebook',
-    link: 'https://www.facebook.com/salmorrinhos/?locale=pt_BR'
-  }
-];
 
 export default defineComponent({
   name: 'MainLayout',
-  computed: {
-    BibliaDois() {
-      return BibliaDois
-    }
-  },
-  components: {
-    Essential
-  },
-  data() {
-    return {
-      leftDrawerOpen: false,
-      linksList: linksList
-    };
-  },
   methods: {
-    AbrirBiblia() {
-      this.$router.push('/Biblia');
-      console.log('Método AbrirBiblia foi chamado!');
-    },
     Marcou() {
       this.$router.push('/Marcou');
       console.log('Método Marcou foi chamado!');
@@ -130,9 +85,6 @@ export default defineComponent({
 @media (max-width: 480px) {
 
 }
-
-
-
 
 @media (max-width: 768px) {
   .footer-menu {

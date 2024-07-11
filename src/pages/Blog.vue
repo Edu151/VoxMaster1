@@ -4,8 +4,10 @@
       <q-img src="../assets/Voxx.png" style="width: 370px; height: 260px" />
       <h1 class="q-mb-md text-h6">Bem-vindos à Conferência de Missão VOX - A voz profética</h1>
       <p class="q-mb text-h5">Aqui você poderá postar e ver o que está rolando na nossa Conferência de Missão 2024!</p>
+
     </q-card>
     <p/>
+
 
     <div v-for="post in reversedBlogPosts" :key="post.id" class="q-mb-md">
       <q-card class="q-pa-md">

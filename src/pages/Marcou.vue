@@ -5,6 +5,7 @@
 
       <q-input v-model="newPost.title" label="Título" filled class="q-mb-md" />
       <q-input v-model="newPost.details" label="Detalhes" filled type="textarea" class="q-mb-md" />
+      <q-input v-model="newPost.date" label="Data" type="date" filled class="q-mb-md" />
 
       <q-btn label="Publicar" color="primary" @click="addPost" class="q-mb-md" />
 
@@ -30,7 +31,8 @@ export default {
     return {
       newPost: {
         title: '',
-        details: ''
+        details: '',
+        date: ''
       },
       blogPosts: []
     };
@@ -47,6 +49,14 @@ export default {
         this.newPost.details = '';
         this.savePosts();
       }
+    },
+    formatDate(date) {
+      // Formata a data para DD/MM/AAAA
+      const formattedDate = new Date(date);
+      const day = formattedDate.getDate().toString().padStart(2, '0');
+      const month = (formattedDate.getMonth() + 1).toString().padStart(2, '0');
+      const year = formattedDate.getFullYear();
+      return `${day}/${month}/${year}`;
     },
     removePost(index) {
       this.blogPosts.splice(index, 1);

@@ -2,10 +2,10 @@
   <q-layout view="lHh Lpr lFf">
     <!-- Cabeçalho -->
     <q-header elevated>
-      <q-toolbar>
+      <q-toolbar><q-img style="width: 50px; height: 50px;margin-left: auto" src="src/assets/img.jpeg"/>
         <q-toolbar-title>
           VOX - A voz profética
-          <q-img style="width: 50px; height: 50px;margin-left: auto" src="src/assets/img.jpeg"/>
+
         </q-toolbar-title>
       </q-toolbar>
     </q-header>

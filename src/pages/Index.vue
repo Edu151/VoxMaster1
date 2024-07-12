@@ -10,7 +10,6 @@
     <div v-for="post in reversedBlogPosts" :key="post.id" class="q-mb-md">
       <q-card class="q-pa-md" >
         <h1 class="q-mb-md text-h6">{{ post.title }}</h1>
-        <p class="q-mb-lg text-h6">{{ formatDate(post.date) }}</p>
         <p class="q-mb-lg text-h6">{{ post.summary }}</p>
         <q-img :src="post.image" style="max-width: 100%; height: auto;" />
       </q-card>

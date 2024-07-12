@@ -4,7 +4,6 @@
       <h1 class="q-mb-md text-h6">FEED</h1>
 
       <q-input v-model="newPost.title" label="Título" filled class="q-mb-md" />
-      <q-input v-model="newPost.date" label="Data" type="date" filled class="q-mb-md" />
       <q-input v-model="newPost.summary" label="Resumo" filled class="q-mb-md" />
 
       <q-uploader
@@ -25,7 +24,6 @@
         <q-card>
           <q-card-section>
             <div class="text-h6">{{ post.title }}</div>
-            <div>{{ formatDate(post.date) }}</div>
             <div>{{ post.summary }}</div>
             <img v-if="post.image" :src="post.image" alt="Foto de Capa" class="q-mt-md" style="max-width: 100%;" />
           </q-card-section>
@@ -48,7 +46,6 @@ export default {
       newPost: {
         image: '',
         title: 'Feed',
-        date: '',
         summary: ''
       },
       uploadedFiles: [],
@@ -62,7 +59,7 @@ export default {
   },
   methods: {
     async addPost() {
-      if (this.newPost.title && this.newPost.date && this.newPost.summary && this.newPost.image) {
+      if (this.newPost.title && this.newPost.summary && this.newPost.image) {
         try {
           const { data, error } = await this.supabase
             .from('posts')
@@ -76,8 +73,7 @@ export default {
             this.blogPosts.push(data[0]);
             this.newPost = {
               image: '',
-              title: '',
-              date: '',
+              title: 'Feed',
               summary: ''
             };
             this.uploadedFiles = [];
@@ -123,6 +119,7 @@ export default {
         console.error('Erro durante o carregamento das postagens:', err);
       }
     },
+
     async onFileAdded(files) {
       if (files.length > 0) {
         const file = files[0];
@@ -152,10 +149,8 @@ export default {
           console.error('Erro durante o upload do arquivo:', err);
         }
       }
-    },
-    formatDate(date) {
-      return new Date(date).toLocaleDateString();
     }
+
   },
   async mounted() {
     await this.loadPosts();

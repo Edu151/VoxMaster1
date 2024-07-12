@@ -4,7 +4,8 @@
     <q-header elevated>
       <q-toolbar>
         <q-toolbar-title>
-          VOX - A voz profética<q-img style="width: 50px; height: 50px;margin-left: auto" src="src/assets/img.jpeg"/>
+          VOX - A voz profética
+          <q-img style="width: 50px; height: 50px;margin-left: auto" src="src/assets/img.jpeg"/>
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
@@ -19,14 +20,10 @@
 
     <!-- Rodapé -->
     <q-footer class="q-pa-md footer-menu">
-      <q-toolbar class="q-gutter-md">
-
+      <q-toolbar class="q-tabs__content--align-center">
         <q-btn class="btn-bib" icon="home" @click="HomePage" />
-        <q-btn class="btn-bib" icon="fa-solid fa-hands-praying" @click="Oracao" />
-        <q-btn class="btn-bib" icon="fa-solid fa-user-check" @click="Marcou" />
         <q-btn class="btn-bib" icon="fa-solid fa-book-bible" @click="GoToBibliaDois" />
-        <q-btn class="btn-bib" icon="fa-solid fa-user-group" @click="ComQuem" />
-        <q-btn class="btn-bib" icon="fa-solid fa-upload" @click="goToAdmin" />
+        <q-btn class="btn-bib" icon="fa-solid fa-plus" @click="goToAdmin" />
 
       </q-toolbar>
     </q-footer>
